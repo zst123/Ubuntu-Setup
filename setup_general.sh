@@ -21,9 +21,10 @@ sudo apt install -y docker.io
 sudo apt install -y curl
 sudo apt install -y libncurses5
 sudo apt install -y build-essential
+sudo apt install -y net-tools
 
 # Utilities
-sudo snap install zerotier-one
+curl -s https://install.zerotier.com | sudo bash
 sudo snap install ffmpeg
 sudo snap install gimp
 sudo apt install -y vlc

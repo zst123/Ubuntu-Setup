@@ -22,3 +22,24 @@ dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6
 # Replace menu item with "Open with Tilix"
 #sudo apt-get install -y python-nautilus
 #sudo apt remove -y --purge nautilus-extension-gnome-terminal
+
+# --------- Bash Theme ---------
+
+https://github.com/speedenator/agnoster-bash
+
+git clone https://github.com/powerline/fonts.git powerline-fonts
+bash ./powerline-fonts/install.sh
+
+mkdir -p $HOME/.bash/themes/agnoster-bash
+git clone https://github.com/speedenator/agnoster-bash.git $HOME/.bash/themes/agnoster-bash
+
+# .bash_aliases
+cat <<- 'EOF' >> ~/.bash_aliases
+	# Bash Theme (agnoster-bash)
+	export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
+	if [[ -f $THEME ]]; then
+	    export DEFAULT_USER=`whoami`
+	    source $THEME
+	fi
+	
+EOF

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Hibernate
+Comment=Hibernate your computer
+Exec=pkexec systemctl hibernate
+Icon=preferences-system-power
+#Terminal=false
+Type=Application
+#NoDisplay=true
+#StartupNotify=true
+Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PrivacySettings;
+OnlyShowIn=GNOME;Unity;
+Keywords=power;hibernate;
+X-Ubuntu-Gettext-Domain=gnome-control-center-2.0
+X-Desktop-File-Install-Version=0.24

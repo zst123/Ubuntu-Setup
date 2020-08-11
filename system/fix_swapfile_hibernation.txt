@@ -1,0 +1,55 @@
+Starting with Ubuntu 17.04, the swap partition was replaced by a swap file. The main advantage of the swap file is easy resizing.
+In the following example, we’ll extend the swap space available in the /swapfile from 4 GB to 8 GB.
+
+Setup swap
+
+	Turn off all swap processes
+		sudo swapoff -a
+
+	Resize the swap to 4GB
+		sudo dd if=/dev/zero of=/swapfile bs=1G count=4
+		
+		if = input file
+		of = output file
+		bs = block size
+		count = multiplier of blocks
+
+	Make the file usable as swap
+		sudo mkswap /swapfile
+
+	Activate the swap file
+		sudo swapon /swapfile
+
+	Check the amount of swap available
+		grep SwapTotal /proc/meminfo
+
+Hibernate activation
+
+	get partition of the root path
+		mount | grep " / "
+
+	get UUID of the root partition from above
+		sudo blkid
+
+	get first "physical" number -> resume_offset
+		sudo filefrag -v /swapfile
+
+	set the resume and resume_offset: "resume=UUID=cdXX--X18 resume_offset=yyyyyy"
+		sudo -b gedit /etc/default/grub
+
+	Configure Grub to resume from the swapfile by editing /etc/default/grub and modify the following line
+		GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=20562a02-cfa6-42e0-bb9f-5e936ea763d0 resume_offset=34818 quiet splash"
+
+	Activate the new grub configuration
+		sudo update-grub
+
+	Test if hibernate works
+		systemctl hibernate
+
+	Add hibernate icon
+		sudo desktop-file-install ./hibernate_computer.desktop 
+
+Reference
+	https://notes.palsch.de/2019/07/ubuntu-18-04-lts-hibernate-to-swapfile/
+	https://bogdancornianu.com/change-swap-size-in-ubuntu/
+	https://askubuntu.com/questions/6769/hibernate-and-resume-from-a-swap-file

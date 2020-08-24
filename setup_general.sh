@@ -30,6 +30,9 @@ sudo snap install gimp
 sudo apt install -y vlc
 sudo apt install -y kolourpaint
 
+# Built-in screen recorder (default 30 sec, change to 10 min)
+gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 600
+
 # Tor
 sudo apt install -y tor torsocks
 sudo systemctl disable tor.service

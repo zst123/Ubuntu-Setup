@@ -25,7 +25,7 @@ sudo apt install -y net-tools
 
 # Utilities
 curl -s https://install.zerotier.com | sudo bash
-sudo snap install ffmpeg
+sudo apt install -y ffmpeg
 sudo snap install gimp
 sudo apt install -y vlc
 sudo apt install -y kolourpaint

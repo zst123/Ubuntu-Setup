@@ -1,0 +1,23 @@
+# copy this file to ~/.local/share/applications/. Change installation paths below to fit your setup.
+
+[Desktop Entry]
+Version=9.3.0
+Type=Application
+Terminal=false
+Name=EAGLE
+GenericName=EDA Suite
+Comment=PCB design: schematic capture, board layout, and autorouter
+
+# Graphics card use LIBGL_ALWAYS_SOFTWARE=1
+# https://askubuntu.com/a/1209089
+Exec=env LIBGL_ALWAYS_SOFTWARE=1 /home/youruser/eagle-9.3.0/eagle %f
+Icon=/home/youruser/eagle-9.3.0/bin/eagle-logo.png
+# paths need to be absolute, no ~ allowed within this file
+
+# meta data 
+Categories=Engineering;Electronics;
+Keywords=eagle;pcb;schematics;electronics;
+MimeType=application/x-eagle-schematic;application/x-eagle-board;application/x-eagle-project;
+
+# used to group all windows under the same launcher icon
+StartupWMClass=eagle

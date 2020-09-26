@@ -1,0 +1,6 @@
+[
+    { "keys": ["ctrl+shift+`"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+    { "keys": ["ctrl+alt+`"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["ctrl+`"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+t"], "command": "new_file" },
+]

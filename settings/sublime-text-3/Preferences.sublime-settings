@@ -1,0 +1,18 @@
+{
+	// Options
+	"always_show_minimap_viewport": true,
+	"overlay_scroll_bars": "enabled",
+	"shift_tab_unindent": true,
+	"show_line_endings": true,
+	"ignored_packages":
+	[
+	],
+
+	// Text
+	"font_face": "Inconsolata",
+	"font_size": 20,
+
+	// Theme
+	"color_scheme": "Packages/Theme - Arc/Arc Darker.tmTheme",
+	"theme": "Arc Dark.sublime-theme"
+}

@@ -1,0 +1,13 @@
+{
+	"installed_packages":
+	[
+		"Theme - Arc",
+		"ClangAutoComplete",
+		"GitGutter",
+		"HexViewer",
+		"Intellitip",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimePythonIDE"
+	]
+}

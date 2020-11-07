@@ -29,7 +29,7 @@ sudo gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # Nemo Desktop change preferences
 dconf write /org/nemo/desktop/home-icon-visible true
-dfonc write /org/nemo/desktop/volumes-visible true
+dconf write /org/nemo/desktop/volumes-visible true
 
 # To remove typeahead:
 # sudo apt install ppa-purge

@@ -1,0 +1,1 @@
+killall -SIGQUIT gnome-shell
